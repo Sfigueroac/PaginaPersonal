@@ -87,3 +87,18 @@ function copiarEmail(event) {
     });
   }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const experiencias = document.querySelectorAll(".experiencia");
+
+    function mostrarExperiencias() {
+        experiencias.forEach(exp => {
+            const rect = exp.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                exp.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", mostrarExperiencias);
+    mostrarExperiencias();
+});
