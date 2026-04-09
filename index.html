@@ -9,7 +9,6 @@
     <meta property="og:description" content="Explora mis proyectos y habilidades. Disponible para trabajos freelance.">
 
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -17,138 +16,135 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <!-- Sección del Encabezado -->
+
+    <!-- Botón de idioma -->
+    <button id="lang-btn" class="lang-btn" onclick="toggleLang()">🇺🇸 EN</button>
+
+    <!-- Encabezado -->
     <header class="header-container">
         <div class="header-left">
           <img src="./assets/images/fotoHeader.jpg" alt="Foto de perfil" class="foto-perfil">
         </div>
         <div class="header-right">
           <h1>Santiago Figueroa</h1>
-          <p>Desarrollador FullStack - Ingeniero de Sistemas en formación</p>
+          <p data-i18n="header-subtitle">Desarrollador FullStack · Ingeniero de Sistemas en formación</p>
           <div class="contact-links">
-            <a href="#" onclick="copiarEmail(event)"><i class="fas fa-envelope"></i> Email</a>  
-            <span id="copiado" style="display:none; font-size: 0.9em; color: rgb(255, 255, 255); margin-left: 10px;">¡Copiado!</span>
+            <a href="#" onclick="copiarEmail(event)"><i class="fas fa-envelope"></i> Email</a>
+            <span id="copiado" style="display:none; font-size: 0.9em; color: rgb(255, 255, 255); margin-left: 10px;" data-i18n="copiado">¡Copiado!</span>
             <a href="https://www.linkedin.com/in/santiago-figueroa-colorado/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a href="https://github.com/Sfigueroac" target="_blank"><i class="fab fa-github"></i> GitHub</a>
           </div>
         </div>
       </header>
-      
-
 
     <div class="container">
-        <!-- Sección de Perfil -->
+
+        <!-- Perfil -->
         <section id="perfil">
-            <h2>Perfil Profesional</h2>
-            <p>
+            <h2 data-i18n="perfil-title">Perfil Profesional</h2>
+            <p data-i18n="perfil-text">
                 Soy estudiante de Ingeniería de Sistemas, con un fuerte interés en inteligencia artificial, programación y desarrollo de software. Tengo experiencia en investigación académica, especialmente en la intersección entre inteligencia artificial y áreas como la salud o el derecho. Cuento con habilidades en lenguajes de programación como JAVA, Python, JavaScript y TypeScript, al igual que en tecnologías como NestJS, React, FLASK y Django. Tengo un portafolio amplio en diversos campos tanto FrontEnd como BackEnd y tengo conocimiento de técnicas de desarrollo ágiles como SCRUM. Además, me mantengo actualizado sobre avances tecnológicos y científicos. Me caracterizo por mi capacidad de aprendizaje autónomo, pensamiento analítico, habilidades de comunicación efectiva y liderazgo.
             </p>
         </section>
 
-        <!-- Sección de Educación -->
+        <!-- Educación -->
         <section id="educacion">
-            <h2>Educación</h2>
-            <p><strong>Universidad Icesi</strong> - Ingeniería de Sistemas (2027)</p>
-            <p>Beca a la excelencia</p>
+            <h2 data-i18n="edu-title">Educación</h2>
+            <p><strong>Universidad Icesi</strong> — <span data-i18n="edu-degree">Ingeniería de Sistemas</span> (2027)</p>
+            <p data-i18n="edu-scholarship">Beca a la excelencia</p>
         </section>
 
-        <!-- Sección de Proyectos -->
+        <!-- Proyectos -->
         <section id="proyectos">
-            <h2>Proyectos Universitarios</h2>
+            <h2 data-i18n="proyectos-title">Proyectos Universitarios</h2>
             <div class="grid-proyectos">
+
                 <div class="proyecto">
-                    <h3>Web App para Base de Datos Cámaras de Comercio</h3>
-                    <p>Programador e Ingeniero Líder de Proyecto (Nov 2023 - Jun 2024)</p>
+                    <h3 data-i18n="p1-title">Web App para Base de Datos Cámaras de Comercio</h3>
+                    <p data-i18n="p1-role">Programador e Ingeniero Líder de Proyecto (Nov 2023 – Jun 2024)</p>
                     <ul>
-                        <li>Fundador de prestigiosa firma de abogados como evaluador</li>
-                        <li>Base de Datos SQL con más de 300 registros</li>
-                        <li>Backend en Python con Flask</li>
+                        <li data-i18n="p1-li1">Fundador de prestigiosa firma de abogados como evaluador</li>
+                        <li data-i18n="p1-li2">Base de Datos SQL con más de 300 registros</li>
+                        <li data-i18n="p1-li3">Backend en Python con Flask</li>
                     </ul>
                 </div>
-                
-        
+
                 <div class="proyecto">
-                    <h3>Aplicativo para sistema de cobro de posible IPS</h3>
-                    <p>Programador (Ene 2023 - May 2023)</p>
+                    <h3 data-i18n="p2-title">Aplicativo para sistema de cobro de posible IPS</h3>
+                    <p data-i18n="p2-role">Programador (Ene 2023 – May 2023)</p>
                     <ul>
-                        <li>Backend realizado en JAVA</li>
-                        <li>Uso de Programación Orientada a Objetos (POO)</li>
+                        <li data-i18n="p2-li1">Backend realizado en JAVA</li>
+                        <li data-i18n="p2-li2">Uso de Programación Orientada a Objetos (POO)</li>
                     </ul>
                 </div>
-        
+
                 <div class="proyecto">
-                    <h3>Sistema de colección de cartas Pokemon</h3>
-                    <p>Programador</p>
+                    <h3 data-i18n="p3-title">Sistema de colección de cartas Pokemon</h3>
+                    <p data-i18n="p3-role">Programador</p>
                     <ul>
-                        <li>Programación Orientada a Objetos</li>
-                        <li>Control de arreglos</li>
+                        <li data-i18n="p3-li1">Programación Orientada a Objetos</li>
+                        <li data-i18n="p3-li2">Control de arreglos</li>
                         <li><a href="https://github.com/Sfigueroac/Pokecollector" target="_blank">Repo en GitHub</a></li>
                     </ul>
                 </div>
-        
+
                 <div class="proyecto">
-                    <h3>Juego de astucia naval BATTLESHIP</h3>
-                    <p>Programador</p>
+                    <h3 data-i18n="p4-title">Juego de astucia naval BATTLESHIP</h3>
+                    <p data-i18n="p4-role">Programador</p>
                     <ul>
-                        <li>Programación Orientada a Objetos</li>
-                        <li>Control de arreglos</li>
+                        <li data-i18n="p4-li1">Programación Orientada a Objetos</li>
+                        <li data-i18n="p4-li2">Control de arreglos</li>
                         <li><a href="https://github.com/Sfigueroac/Battleship" target="_blank">Repo en GitHub</a></li>
                     </ul>
                 </div>
+
             </div>
         </section>
-        
 
-        <!-- Sección de Experiencia -->
+        <!-- Experiencia -->
         <section id="experiencia">
-            <h2>Experiencia Profesional</h2>
+            <h2 data-i18n="exp-title">Experiencia Profesional</h2>
             <div class="grid-experiencia">
                 <div class="experiencia">
-                    <h3>Programador de Soluciones Web y Digitalización Legal</h3>
-                    <p><em>Hurtado Gandini Dávalos SAS — mayo de 2025 a septiembre de 2025</em></p>
+                    <h3 data-i18n="exp1-title">Programador de Soluciones Web y Digitalización Legal</h3>
+                    <p><em data-i18n="exp1-date">Hurtado Gandini Dávalos SAS — mayo de 2025 a septiembre de 2025</em></p>
                     <ul>
-                        <li>Programador de Sistema de Diagnóstico Legal aumentando la productividad y reduciendo el contacto necesario entre cliente y abogado.</li>
-                        <li>Uso de NestJS, PostgreSQL y React.</li>
-                        <li>Se realizó todo el proceso del Software: levantamiento de requerimientos, modelado del sistema, uso de sprints y metodologías ágiles de desarrollo.</li>
+                        <li data-i18n="exp1-li1">Programador de Sistema de Diagnóstico Legal aumentando la productividad y reduciendo el contacto necesario entre cliente y abogado.</li>
+                        <li data-i18n="exp1-li2">Uso de NestJS, PostgreSQL y React.</li>
+                        <li data-i18n="exp1-li3">Se realizó todo el proceso del Software: levantamiento de requerimientos, modelado del sistema, uso de sprints y metodologías ágiles de desarrollo.</li>
                     </ul>
                 </div>
             </div>
         </section>
-        <!-- Sección de Habilidades -->
 
+        <!-- Habilidades y Logros -->
         <div class="grid-dos-columnas">
             <section id="habilidades">
-                <h2>Habilidades</h2>
-                <h3>Técnicas</h3>
+                <h2 data-i18n="skills-title">Habilidades</h2>
+                <h3 data-i18n="skills-h3-tech">Técnicas</h3>
                 <p>JAVA, Python, JavaScript, TypeScript, SQL, HTML/HTML5, CSS/CSS3, React, NestJS, NodeJS, Flask, Django, Excel, Canva, Notion, Trello, Suite de Google</p>
-                <h3>Idiomas</h3>
-                <p>Inglés B2 | Aprendiendo Portugués</p>
+                <h3 data-i18n="skills-h3-lang">Idiomas</h3>
+                <p data-i18n="skills-lang-p">Inglés B2 | Aprendiendo Portugués</p>
             </section>
-        
+
             <section id="logros">
-                <h2>Logros y Certificaciones</h2>
+                <h2 data-i18n="logros-title">Logros y Certificaciones</h2>
                 <ul>
-                    <li>🏆 Beca de Excelencia en la Universidad Icesi</li>
-                    <li>🎓 Certificación en Introducción a la Ciberseguridad - Platzi</li>
-                    <li>🎓 Certificación en Desarrollo BackEnd - Platzi</li>
-                    <li>🏅 Diplomado en Ciberseguridad - Universidad Autónoma de Occidente</li>
+                    <li data-i18n="logros-li1">🏆 Beca de Excelencia en la Universidad Icesi</li>
+                    <li data-i18n="logros-li2">🎓 Certificación en Introducción a la Ciberseguridad - Platzi</li>
+                    <li data-i18n="logros-li3">🎓 Certificación en Desarrollo BackEnd - Platzi</li>
+                    <li data-i18n="logros-li4">🏅 Diplomado en Ciberseguridad - Universidad Autónoma de Occidente</li>
                 </ul>
             </section>
         </div>
-        
-         
-
-
-
 
     </div>
 
     <!-- Pie de Página -->
     <footer>
-        <p>© 2026 Santiago Figueroa. Todos los derechos reservados.</p>
+        <p data-i18n="footer-text">© 2026 Santiago Figueroa. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Enlace al script de animaciones -->
     <script src="script.js"></script>
 </body>
 </html>
